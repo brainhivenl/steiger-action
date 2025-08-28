@@ -1,0 +1,33 @@
+name: Steiger Action
+description: Run a steiger command
+author: Dillen Meijboom
+branding:
+  icon: layers
+  color: blue
+inputs:
+  cmd:
+    description: "Command to run"
+    required: true
+    default: "build"
+  args:
+    description: "Arguments to pass to the command"
+    required: false
+    default: ""
+  version:
+    description: "Version to use"
+    required: false
+    default: "v0.0.1"
+outputs: {}
+runs:
+  using: "composite"
+  steps:
+    - uses: robinraju/release-downloader@v1
+      with:
+        tag: ${{ inputs.version }}
+        repository: brainhivenl/steiger
+        fileName: steiger-x86_64-unknown-linux-gnu
+    - run: chmod +x steiger-x86_64-unknown-linux-gnu
+      shell: bash
+    - name: Run steiger
+      run: ./steiger-x86_64-unknown-linux-gnu ${{ inputs.cmd }} ${{ inputs.args }}
+      shell: bash
