@@ -16,7 +16,7 @@ inputs:
   version:
     description: "Version to use"
     required: false
-    default: "v0.0.1"
+    default: "v0.0.2"
 outputs: {}
 runs:
   using: "composite"
