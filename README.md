@@ -17,7 +17,7 @@ jobs:
         with:
           cmd: build
           args: --strict
-          version: v0.0.1
+          version: v0.0.4
 ```
 
 ## Inputs
@@ -26,7 +26,7 @@ jobs:
 | --------- | -------------------------------- | -------- | -------- |
 | `cmd`     | Command to run                   | Yes      | `build`  |
 | `args`    | Arguments to pass to the command | No       | `""`     |
-| `version` | Version of Steiger to use        | No       | `v0.0.1` |
+| `version` | Version of Steiger to use        | No       | `v0.0.4` |
 
 ## Examples
 
