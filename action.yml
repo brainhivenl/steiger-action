@@ -16,7 +16,7 @@ inputs:
   version:
     description: "Version to use"
     required: false
-    default: "v0.0.6"
+    default: "v0.0.7"
   builders:
     description: "Comma-separated list of builders to install dependencies for (supported: railpack)"
     required: false
